@@ -1,14 +1,15 @@
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { RootLayoutProps } from '@/types'
 import React from 'react'
-import { AppSidebar } from './_components/app-sidebar'
+import { AppSidebar } from './_components/sidebar/app-sidebar'
+import AppNavbar from './_components/navbar/app-navbar'
 
 const Layout = ({children}: RootLayoutProps) => {
   return (
        <SidebarProvider>
       <AppSidebar />
-      <main>
-        <SidebarTrigger />
+      <main className='w-full h-full'>
+        <AppNavbar/>
         {children}
       </main>
     </SidebarProvider>
