@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     return new Response("Error: Verefication error", { status: 400 });
   }
 
-  const { id } = evt.data;
+  const  {id}  = evt.data;
   const eventType = evt.type;
 
   if (eventType === "user.created") {
